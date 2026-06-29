@@ -4,8 +4,3 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-agents/external_research.py
-agents/recommendation.py
-agents/report.py
-agents/reasoning.py
-api/analysis.py
