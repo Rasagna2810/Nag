@@ -425,12 +425,11 @@ This project was developed as part of the **XLVentures.AI Hackathon 2026**.
 
 #  Team
 
-**Team Name:** *Your Team Name*
+**Team Name:** *D&D*
 
-* Member 1
-* Member 2
-* Member 3
-* Member 4
+* K.Rasagna
+* P.Roji
+
 
 ---
 
