@@ -79,15 +79,18 @@ The platform helps Customer Success Managers make better decisions for existing 
 ### Agentic Workflow
 
 ```text
-Planner Agent
-      ↓
-Internal Knowledge Agent
-      ↓
-Reasoning Agent
-      ↓
-Recommendation Agent
-      ↓
+Planner Agent 
+↓ 
+├── Internal Knowledge Agent 
+│   
+└── External Knowledge Agent 
+↓ 
+Reasoning Agent 
+↓ 
+Recommendation Agent 
+↓ 
 Report Agent
+
 ```
 
 ### Explainable Recommendations
@@ -248,8 +251,9 @@ Customer Selected
 Analyze Customer
         ↓
 Planner Agent
-        ↓
-Internal Knowledge Agent
+       ├── Internal Knowledge Agent 
+       │   
+       └── External Knowledge Agent 
         ↓
 Reasoning Agent
         ↓
@@ -273,13 +277,11 @@ Memory
 * Customer Health Improvement
 
 ## Future Enhancements
-
-* Multi-customer prioritization dashboard
-* External market intelligence
-* Predictive churn scoring
-* Automated workflow execution
-* Advanced analytics dashboard
-* Multi-domain support
+* Calendar Connector (Google Calendar / Outlook Calendar)
+*Voice call transcript analysis
+*Recommendation effectiveness tracking
+*Email Drafting Agent
+*Role-based approval workflow
 
 ---
 
