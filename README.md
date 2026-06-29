@@ -1,14 +1,41 @@
-#  Intelligent Next Best Action Platform
+# Intelligent Next Best Action Platform
 
-An **Agentic Decision Intelligence Platform** that transforms customer interactions and enterprise knowledge into actionable recommendations for Customer Success Managers.
+## Team Details
 
-The platform analyzes customer context, retrieves organizational knowledge, identifies risks and opportunities, and generates explainable **Next Best Actions (NBA)** using multiple AI agents.
+**Team Name:** D&D
+
+**Team Members:**
+
+* K. Rasagna
+* P. Roji
+* Member 3 Name
+
+**Hackathon:** XLVentures.AI Hackathon 2026
 
 ---
 
-#  Problem Statement
+# Project Overview
 
-Customer Success Managers (CSMs) often spend significant time manually reviewing:
+## Introduction
+
+The Intelligent Next Best Action Platform is an Agentic Decision Intelligence Platform designed for B2B SaaS Customer Success teams. The platform transforms customer interactions and enterprise knowledge into actionable recommendations that help Customer Success Managers make better and faster decisions.
+
+Customer information is often spread across multiple systems such as CRM records, support tickets, emails, meeting notes, and internal documentation. Manually analyzing all this information is time-consuming and can lead to delayed responses, customer churn, and missed business opportunities.
+
+Our platform uses multiple AI agents that collaborate to:
+
+* Analyze customer interactions.
+* Retrieve enterprise knowledge.
+* Identify risks and opportunities.
+* Generate explainable Next Best Actions.
+* Support Human-in-the-Loop approval.
+* Learn from previous decisions through memory.
+
+---
+
+## Problem Statement
+
+Customer Success Managers spend significant time manually reviewing:
 
 * CRM records
 * Support tickets
@@ -17,55 +44,34 @@ Customer Success Managers (CSMs) often spend significant time manually reviewing
 * Previous recommendations
 * Internal documentation
 
-before deciding how to proceed with a customer.
-
-This process is time-consuming, inconsistent, and may lead to:
+This process may result in:
 
 * Missed renewal opportunities
 * Delayed escalations
 * Customer churn
 * Lost expansion opportunities
 
-This platform automates customer analysis and recommends the most appropriate actions with supporting evidence.
+---
+
+## Business Domain
+
+**Domain:** B2B SaaS Customer Success
+
+The platform helps Customer Success Managers make better decisions for existing customers by providing intelligent recommendations and business insights.
 
 ---
 
-#  Objectives
+## Key Features
 
-* Automate customer analysis
-* Reduce manual effort for Customer Success Managers
-* Identify risks and opportunities
-* Generate explainable recommendations
-* Support Human-in-the-Loop decision making
-* Learn from previous decisions through memory
-
----
-
-#  Business Domain
-
-**B2B SaaS Customer Success**
-
-The platform helps Customer Success Managers make better decisions for existing customers by analyzing customer interactions and enterprise knowledge.
-
----
-
-#  Key Features
-
-## Customer Interaction Analysis
-
-The platform ingests:
+### Customer Interaction Analysis
 
 * CRM Updates
 * Meeting Notes
 * Support Tickets
 * Emails
-* Previous Recommendations
+* Historical Recommendations
 
----
-
-## Enterprise Knowledge Base (RAG)
-
-The platform retrieves organizational knowledge from a vector database, including:
+### Enterprise Knowledge Base (RAG)
 
 * Troubleshooting Guides
 * Renewal Playbooks
@@ -73,11 +79,7 @@ The platform retrieves organizational knowledge from a vector database, includin
 * Product Documentation
 * Escalation Procedures
 
----
-
-## Agentic Workflow
-
-Multiple AI agents collaborate to perform customer analysis.
+### Agentic Workflow
 
 ```text
 Planner Agent
@@ -91,35 +93,27 @@ Recommendation Agent
 Report Agent
 ```
 
----
-
-## Explainable Recommendations
+### Explainable Recommendations
 
 Each recommendation includes:
 
 * Priority
 * Due Date
-* Evidence
 * Business Impact
-* Confidence
+* Supporting Evidence
 * Execution Steps
+* Confidence Score
 
----
-
-## Human-in-the-Loop
-
-Recommendations are not automatically executed.
+### Human-in-the-Loop
 
 Users can:
 
-* Approve
-* Reject
-* Provide Feedback
-* Mark Actions as Completed
+* Approve recommendations
+* Reject recommendations
+* Provide feedback
+* Mark actions as completed
 
----
-
-## Memory
+### Memory
 
 The platform stores:
 
@@ -128,213 +122,59 @@ The platform stores:
 * Completed actions
 * Feedback
 
-Future analyses use this information to generate better recommendations.
+Future analyses use this memory to improve recommendations.
 
 ---
 
-#  System Architecture
+## Technology Stack
 
-```text
-Customer Data
-      │
-      ▼
-MongoDB
-      │
-      ▼
-Planner Agent
-      │
-      ▼
-Internal Knowledge Agent
-      │
-      ├── Customer Interactions
-      ├── Customer History
-      └── Knowledge Base (Qdrant)
-      │
-      ▼
-Reasoning Agent
-      │
-      ▼
-Recommendation Agent
-      │
-      ▼
-Report Agent
-      │
-      ▼
-Human Review
-      │
-      ▼
-Memory
-```
+### Frontend
 
----
+* React.js
+* Tailwind CSS
+* Vite
 
-#  Technology Stack
-
-## Backend
+### Backend
 
 * FastAPI
 * Python
 * LangGraph
 * LangChain
 
-## Frontend
-
-* React.js
-* Vite
-* Tailwind CSS
-
-## Databases
+### Databases
 
 * MongoDB
 * Qdrant Vector Database
 
-## AI & Embeddings
+### AI
 
 * Google Gemini
 * Sentence Transformers
 
-## Authentication
+### Authentication
 
 * JWT Authentication
 
 ---
 
-#  Project Structure
+# GitHub Repository Link
 
-```text
-enterprise-ai/
-│
-├── backend/
-│   ├── agents/
-│   ├── api/
-│   ├── services/
-│   ├── database/
-│   ├── models/
-│   └── websockets/
-│
-└── frontend/
-    ├── components/
-    ├── pages/
-    ├── hooks/
-    └── api/
-```
+Repository:
+
+https://github.com/Rasagna2810/Nag
+
+
 
 ---
 
-#  AI Agents
-
-## Planner Agent
-
-* Understands customer context
-* Determines analysis strategy
-* Generates knowledge search query
-
----
-
-## Internal Knowledge Agent
-
-Retrieves:
-
-* Customer information
-* Emails
-* Support tickets
-* Meeting notes
-* Knowledge articles
-* Historical recommendations
-
----
-
-## Reasoning Agent
-
-Performs:
-
-* Risk analysis
-* Opportunity analysis
-* Customer health calculation
-* Business reasoning
-
----
-
-## Recommendation Agent
-
-Generates:
-
-* Next Best Actions
-* Priorities
-* Due dates
-* Business impact
-* Confidence scores
-
----
-
-## Report Agent
-
-Creates:
-
-* Executive Summary
-* Risk Assessment
-* Opportunities
-* Final Recommendations
-
----
-
-#  Knowledge Base
-
-Example knowledge articles:
-
-* Epic EHR Integration Recovery Guide
-* Renewal Risk Management Playbook
-* Executive Escalation Procedure
-* Customer Adoption Best Practices
-* Expansion Opportunity Guide
-* Feature Request Management Process
-
----
-
-#  Recommendation Lifecycle
-
-```text
-Analysis
-    ↓
-Recommendations Generated
-    ↓
-Human Review
-    ↓
-Approve / Reject
-    ↓
-Action Center
-    ↓
-Completion
-    ↓
-Feedback
-    ↓
-Memory
-```
-
----
-
-#  Success Metrics
-
-* Customer Retention Rate
-* Renewal Success Rate
-* Churn Reduction
-* Expansion Revenue
-* Recommendation Acceptance Rate
-* Recommendation Completion Rate
-* Customer Health Improvement
-
----
-
-#  Installation
+# Setup Instructions
 
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/enterprise-ai.git
+git clone https://github.com/Rasagna2810/Nag
 cd enterprise-ai
 ```
-
----
 
 ## Backend Setup
 
@@ -361,7 +201,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Create `.env`
+Create a `.env` file:
 
 ```env
 GEMINI_API_KEY=
@@ -371,7 +211,7 @@ QDRANT_URL=http://localhost:6333
 JWT_SECRET=
 ```
 
-Run:
+Run the backend server:
 
 ```bash
 uvicorn main:app --reload
@@ -387,22 +227,55 @@ npm install
 npm run dev
 ```
 
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+Backend URL:
+
+```text
+http://localhost:8000
+```
+
 ---
 
-#  Demo Workflow
+# Additional Notes
 
-1. Login as Customer Success Manager.
-2. Select a customer.
-3. Click **Analyze Customer**.
-4. AI agents collaborate and generate recommendations.
-5. Review recommendations.
-6. Approve or reject actions.
-7. Complete tasks and provide feedback.
-8. System learns from previous decisions.
+## System Workflow
 
----
+```text
+Customer Selected
+        ↓
+Analyze Customer
+        ↓
+Planner Agent
+        ↓
+Internal Knowledge Agent
+        ↓
+Reasoning Agent
+        ↓
+Recommendation Agent
+        ↓
+Report Agent
+        ↓
+Human Approval
+        ↓
+Memory
+```
 
-#  Future Enhancements
+## Success Metrics
+
+* Customer Retention Rate
+* Renewal Success Rate
+* Churn Reduction
+* Expansion Revenue
+* Recommendation Acceptance Rate
+* Recommendation Completion Rate
+* Customer Health Improvement
+
+## Future Enhancements
 
 * Multi-customer prioritization dashboard
 * External market intelligence
@@ -412,19 +285,4 @@ npm run dev
 * Multi-domain support
 
 ---
-
-#  License
-
-This project was developed as part of the **XLVentures.AI Hackathon 2026**.
-
----
-
-#  Team
-
-**Team Name:** *D&D*
-
-* K.Rasagna
-* P.Roji
-
-
 
