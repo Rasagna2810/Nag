@@ -1,7 +1,3 @@
-Here's a professional **README.md** that matches your hackathon project and can be directly copied into GitHub.
-
----
-
 #  Intelligent Next Best Action Platform
 
 An **Agentic Decision Intelligence Platform** that transforms customer interactions and enterprise knowledge into actionable recommendations for Customer Success Managers.
