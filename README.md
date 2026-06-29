@@ -8,9 +8,6 @@
 
 * K. Rasagna
 * P. Roji
-* Member 3 Name
-
-**Hackathon:** XLVentures.AI Hackathon 2026
 
 ---
 
